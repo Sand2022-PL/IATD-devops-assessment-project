@@ -35,10 +35,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker Test Image
-      run: docker build -t sand734/pauluslawson/sandrine/-intro-to-devops-a2:test-latest -f Dockerfiles/test.Dockerfile .
+      run: docker build -t sand734/pauluslawson-sandrine-intro-to-devops-a2:test-latest -f Dockerfiles/test.Dockerfile .
 
     - name: Push Docker Test Image
-      run: docker push sand734/pauluslawson/sandrine/-intro-to-devops-a2:test-latest
+      run: docker push sand734/pauluslawson-sandrine-intro-to-devops-a2:test-latest
         
     - name: Build Docker User Image
       run: docker build -t sand734/pauluslawson-sandrine-intro-to-devops-a2:user-latest -f Dockerfiles/user.Dockerfile .
