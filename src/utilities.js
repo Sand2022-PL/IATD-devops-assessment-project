@@ -87,13 +87,13 @@ export function logSeparated(toPrint, lineLength) {
  * @param {string} date the date to validate
  */
 export function isValidDateString(date) {
-    const dayString = date.substring(0, 2);
+    //const dayString = date.substring(0, 2);
     const daysInMonths = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; // assume 29 days in February for simplicity
     const segments = date.split("/"); // split the date into the three segments (i.e. DD, MM, YYYY)
 
     if (segments.length !== 3) return false; // if there are too few or too many segments something is wrong
     if (segments[0].length !== 2 || segments[1].length !== 2 || segments[2].length !== 4) return false; // if there are too few or too many digits in each segment somthing is wrong
-    
+
     let numbers = [1];
 
     for (let i = 0; i < 3; i++) {
