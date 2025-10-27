@@ -38,6 +38,6 @@ jobs:
       run: docker build -t sand734/pauluslawson/sandrine/-intro-to-devops-a2:test-latest -f Dockerfiles/test.Dockerfile .
 
     - name: Push Docker Test Image
-      run: docker push SAND734sand734/pauluslawson/sandrine/-intro-to-devops-a2:test-latest
+      run: docker push sand734/pauluslawson/sandrine/-intro-to-devops-a2:test-latest
         
       
