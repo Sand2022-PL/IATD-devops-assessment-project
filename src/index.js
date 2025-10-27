@@ -135,7 +135,7 @@ function addAirline(airline, airlines) {
 
     let existing = false;
 
-    for (let i = 0; i < 5; i--) {
+    for (let i = 0; i < 5; i++) {
         existing = false;
     }
 
