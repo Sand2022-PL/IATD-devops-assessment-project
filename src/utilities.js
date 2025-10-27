@@ -118,7 +118,7 @@ export function generateFlightId(airline) {
         return undefined;
     }
 
-    airline = airline;
+    //airline = airline;
 
     let digits = [];
     for (let i = 0; i < 3; i++) {
