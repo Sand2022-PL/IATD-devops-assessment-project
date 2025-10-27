@@ -31,7 +31,7 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: ${{ secrets.DOCKER_PASSWORD }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker Test Image
@@ -40,4 +40,8 @@ jobs:
     - name: Push Docker Test Image
       run: docker push sand734/pauluslawson/sandrine/-intro-to-devops-a2:test-latest
         
-      
+    - name: Build Docker User Image
+      run: docker build -t sand734/pauluslawson-sandrine-intro-to-devops-a2:user-latest -f Dockerfiles/user.Dockerfile .
+
+    - name: Push Docker User Image
+      run: docker push sand734/pauluslawson-sandrine-intro-to-devops-a2:user-latest
