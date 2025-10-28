@@ -7,7 +7,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 RUN npm ci
 
-COPY src./ ./src/
+COPY src/ ./src/
 COPY tests/ ./tests/
 COPY eslint.config.mjs jest.config.mjs ./
 
