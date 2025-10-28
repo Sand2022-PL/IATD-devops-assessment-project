@@ -4,8 +4,11 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm ci
+RUN npm ci
 
-COPY ./ ./
+COPY src./ ./src/
+COPY tests/ ./tests/
+COPY eslint.config.mjs jest.config.mjs ./
 
 CMD [ "npm", "test" ]
