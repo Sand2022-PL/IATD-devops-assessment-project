@@ -2,10 +2,10 @@ FROM node:20.12-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json package-lock ./
 
 RUN npm install
 
-COPY . .
+COPY ./ ./
 
 CMD [ "npm", "test" ]
